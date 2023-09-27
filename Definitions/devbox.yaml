@@ -4,5 +4,5 @@ hostInformation: general_i_8c32gb512ssd_v2
 setupTasks:
   - task: choco
     inputs:
-      package: "git"
+      package: git
 
