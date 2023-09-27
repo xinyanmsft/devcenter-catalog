@@ -1,8 +1,13 @@
-name: DhruvTest
-image: microsoftwindowsdesktop_windows-ent-cpc_win11-21h2-ent-cpc-m365
-hostInformation: general_i_8c32gb512ssd_v2
 setupTasks:
-    - task: choco
-      description: install git
-      inputs:
-        package: git
+  - task: choco
+    inputs:
+      package: "git"
+  - task: powershell
+    inputs:
+      command: "cd ~ && git clone https://github.com/IRCC-ca/ds-sdc-dev.git"
+  - task: choco
+    inputs:
+      package: "nodejs"
+  - task: powershell
+    inputs:
+      command: "cd ~/ds-sdc-dev && npm install"
