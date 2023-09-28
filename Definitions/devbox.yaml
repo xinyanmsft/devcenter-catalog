@@ -1,4 +1,4 @@
-name: DhruvTest
+name: ircc-sdc-test
 image: microsoftwindowsdesktop_windows-ent-cpc_win11-21h2-ent-cpc-m365
 hostInformation: general_i_8c32gb512ssd_v2
 setupTasks:
