@@ -27,7 +27,8 @@ if ($WorkingDirectory -and $WorkingDirectory -ne "") {
 # even if the system has pwsh.exe.
 if($RunAsUser -ne "true") {
     Write-Output "Running command as sysadmin: $Command"
-    $ScriptFileName = New-TemporaryFile.Name + ".ps1"
+    $TempFile = New-TemporaryFile
+    $ScriptFileName = $TempFile.Name + ".ps1"
     $Command | Out-File $ScriptFileName
     powershell.exe -File $ScriptFileName
     $CommandExitCode = $LASTEXITCODE
